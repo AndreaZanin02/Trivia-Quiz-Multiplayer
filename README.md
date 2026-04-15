@@ -15,3 +15,17 @@ The application is composed of two main modules:
 * **Custom TCP Communication Protocol:** The application uses the TCP protocol to guarantee that packets arrive in order and without loss, which is critical since a single missing character would result in an incorrect quiz answer. Data exchange uses a custom text format where the length of the message is communicated first, followed by the actual payload. This approach handles variable-length messages without defining a standard packet size, thus preventing resource waste.
 * **Robust Disconnection Handling:** A specific `ges Thread` data structure maintains information about the currently executing thread. This is crucial for handling forced disconnections: if a `SIGPIPE` signal arrives, the associated handler can safely terminate the user's session as if they had manually typed the `endquiz` command.
 * **High Configurability:** The number of implemented themes, the listening port, and the IP address can be easily modified within the `Costanti.h` file. New questions can be added without modifying the code by simply placing correctly formatted `.txt` files in the corresponding folders (using the `&` character to separate questions and answers, ending with a carriage return). Maximum message lengths are also bounded to avoid creating unnecessarily large `char` arrays.
+
+## Compilation and Execution
+
+[cite_start]This project is designed specifically for **Linux/Unix-based systems**[cite: 8, 13, 22]. If you are on Windows, it is highly recommended to use **WSL (Windows Subsystem for Linux)** to ensure compatibility with POSIX headers like `<arpa/inet.h>` and `<pthread.h>`.
+
+### Prerequisites
+* **GCC Compiler**
+* **Make** utility
+* [cite_start]**Pthread library** (usually included in `build-essential` on Ubuntu/WSL) [cite: 13, 15]
+
+### How to Build
+To compile both the server and the client, navigate to the project root and run:
+```bash
+make
