@@ -1,0 +1,6 @@
+Scacchi
+-Quante caselle ha una scacchiera?&64
+-Quante mosse è durata la partita più lunga mai fatta?&269
+-Come si chiama un attacco al re imparabile?&scacco matto
+-Dove sono nati gli scacchi?&india
+-Quale colore inizia per primo?&bianco
