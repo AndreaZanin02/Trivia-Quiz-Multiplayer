@@ -18,12 +18,12 @@ The application is composed of two main modules:
 
 ## Compilation and Execution
 
-[cite_start]This project is designed specifically for **Linux/Unix-based systems**[cite: 8, 13, 22]. If you are on Windows, it is highly recommended to use **WSL (Windows Subsystem for Linux)** to ensure compatibility with POSIX headers like `<arpa/inet.h>` and `<pthread.h>`.
+This project is designed specifically for **Linux/Unix-based systems**. If you are on Windows, it is highly recommended to use **WSL (Windows Subsystem for Linux)** to ensure compatibility with POSIX headers like `<arpa/inet.h>` and `<pthread.h>`.
 
 ### Prerequisites
 * **GCC Compiler**
 * **Make** utility
-* [cite_start]**Pthread library** (usually included in `build-essential` on Ubuntu/WSL) [cite: 13, 15]
+* **Pthread library** (usually included in `build-essential` on Ubuntu/WSL)
 
 ### How to Build
 To compile both the server and the client, navigate to the project root and run:
